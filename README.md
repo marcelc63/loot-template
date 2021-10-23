@@ -27,9 +27,10 @@ Please do the followings
 
 # Included in the Template
 
-1. Contract that SuperSea used
-2. Deployment Script
-3. Testing Script
+1. Contract that CoolCatsNFT used
+2. Complete commentary on core functions
+3. Deployment Script
+4. Testing Script
 
 # Commands to use
 
