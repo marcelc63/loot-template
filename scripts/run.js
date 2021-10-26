@@ -1,30 +1,17 @@
 const main = async () => {
-  const ContractFactory = await hre.ethers.getContractFactory(
-    "SuperSeaTemplate"
-  );
+  const ContractFactory = await hre.ethers.getContractFactory("LootTemplate");
 
   const contract = await ContractFactory.deploy();
   await contract.deployed();
   console.log("Contract deployed to:", contract.address);
 
-  // Subscribe 30 Days
-  let subscribe30DaysTxn = await contract.subscribe(0, {
-    value: hre.ethers.utils.parseEther("0.1"),
-  });
-  await subscribe30DaysTxn.wait();
-
-  // Subscribe 365 Days
-  let subscribe365DaysTxn = await contract.subscribe(1, {
-    value: hre.ethers.utils.parseEther("0.5"),
-  });
-  await subscribe365DaysTxn.wait();
-
-  // Call the function.
-  let mintTxn = await contract.mint({
-    value: hre.ethers.utils.parseEther("0.75"),
-  });
-  // Wait for it to be mined.
+  // Mint loot bag with token id 1
+  let mintTxn = await contract.claim(1);
   await mintTxn.wait();
+
+  // Check the tokenURI
+  let tokenURI = await contract.tokenURI(1);
+  console.log(tokenURI);
 };
 
 const runMain = async () => {

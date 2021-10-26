@@ -1,7 +1,5 @@
 const main = async () => {
-  const ContractFactory = await hre.ethers.getContractFactory(
-    "SuperSeaTemplate"
-  );
+  const ContractFactory = await hre.ethers.getContractFactory("LootTemplate");
 
   const contract = await ContractFactory.deploy();
   await contract.deployed();

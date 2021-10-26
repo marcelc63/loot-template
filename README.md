@@ -1,15 +1,15 @@
-# Solidity Contract Template based on SuperSea [https://nonfungible.tools](https://nonfungible.tools)
+# Solidity Contract Template based on Loot [@lootproject](https://twitter.com/lootproject) [https://lootproject.com](https://lootproject.com)
 
-Source: [https://etherscan.io/address/0x24E047001f0Ac15f72689D3F5cD0B0f52b1abdF9](https://etherscan.io/address/0x24E047001f0Ac15f72689D3F5cD0B0f52b1abdF9)
+Source: [https://etherscan.io/address/0xff9c1b15b16263c61d017ee9f65c50e4ae0113d7](https://etherscan.io/address/0xff9c1b15b16263c61d017ee9f65c50e4ae0113d7)
 
-SuperSea contract showcases how you can use NFT for memberships and contract for subscription.
-Access to member-only features are protected behind a paywall that is unlocked through this contract.
-The subscription logic allows you to collect payment and give access to users.
-The NFT membership allows you to grant lifetime access to NFT holders.
+Loot is a NFT that took the NFT world by storm. It redefines what an NFT could be.
+A characteristic of a loot NFT is all data is contained on chain. No IPFS or external hosting used.
+They did this in a very gas efficient way for the minter as most computation is offloaded to the read function.
+Loot has become a prime example on how to create on-chain NFTs.
 
-This contract represents a very real use case where you can now provide authentication,
-memberships, and subscriptions through the blockchain.
-I see this as a common practice as web3 obtain even wider adoption.
+This contract showcase how you will want to structure your contract to create an on-chain NFT,
+the key is to not construct the metadata during minting, but offload everything to a read function.
+Although deployment might be costly, it makes minting gas efficient.
 
 Curated by [@marcelc63](https://twitter.com/marcelc63) - [marcelchristianis.com](https://marcelchristianis.com)
 Each functions have been annotated based on my own research.
